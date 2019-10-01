@@ -1,0 +1,8 @@
+{
+  "name": "@web-clipper/documents",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:webclipper/documents.git",
+  "author": "DiamondYuan <admin@diamondyuan.com>",
+  "license": "MIT"
+}
