@@ -4,5 +4,12 @@
   "main": "index.js",
   "repository": "git@github.com:webclipper/documents.git",
   "author": "DiamondYuan <admin@diamondyuan.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vuepress": "^1.1.0"
+  }
 }
