@@ -20,7 +20,7 @@ module.exports = {
         ariaLabel: 'Select language',
         editLinkText: 'Edit this page on GitHub',
         lastUpdated: 'Last Updated',
-        nav: [{ text: 'Home', link: '/' }, { text: 'Config', link: '/config' }]
+        nav: [{ text: 'Home', link: '/' }, { text: 'Contribute', link: '/contribute' }]
       },
       '/zh/': {
         navbar: true,
@@ -29,7 +29,7 @@ module.exports = {
         ariaLabel: '选择语言',
         editLinkText: '在 GitHub 上编辑此页',
         lastUpdated: '上次更新',
-        nav: [{ text: '首页', link: '/' }, { text: '配置', link: '/config' }]
+        nav: [{ text: '首页', link: '/' }, { text: '贡献', link: '/contribute' }]
       }
     }
   },
