@@ -1,1 +1,1 @@
-# GitHub 仓库
+# GitHub Repository

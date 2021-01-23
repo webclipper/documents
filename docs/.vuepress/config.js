@@ -1,3 +1,7 @@
+const contributeSidebarFactory = require("../../src/contributeSidebarFactory");
+
+console.log(contributeSidebarFactory("en").help);
+
 module.exports = {
   locales: {
     "/": {
@@ -17,11 +21,8 @@ module.exports = {
         displayAllHeaders: true,
         sidebarDepth: 2,
         sidebar: {
-          "/contribute/": [
-            "",
-            "/contribute/note-taking-service",
-            "/contribute/image-hosting",
-          ],
+          "/contribute/": contributeSidebarFactory("en").contribute,
+          "/help/": contributeSidebarFactory("en").help,
         },
         navbar: true,
         label: "English",
@@ -31,55 +32,14 @@ module.exports = {
         lastUpdated: "Last Updated",
         nav: [
           { text: "Home", link: "/" },
-          { text: "Contribute", link: "/contribute/" },
+          { text: "Contribute", link: "/contribute/how-to-contribute" },
+          { text: "Help", link: "/help/" },
         ],
       },
       "/zh/": {
         sidebar: {
-          "/zh/contribute": [
-            "/zh/contribute/how-to-contribute",
-            "/zh/contribute/localization",
-          ],
-          "/zh/help": [
-            {
-              title: "安装",
-              sidebarDepth: 2,
-              collapsable: false,
-              children: [
-                "/zh/help/install/chrome",
-                "/zh/help/install/edge",
-                "/zh/help/install/firefox",
-              ],
-            },
-            {
-              title: "账户",
-              sidebarDepth: 2,
-              collapsable: false,
-              children: [
-                "/zh/help/account/yuque",
-                "/zh/help/account/github-issue",
-                "/zh/help/account/github-repository",
-                "/zh/help/account/webdav",
-                "/zh/help/account/flomo",
-                {
-                  title: "加强包",
-                  collapsable: false,
-                  children: [
-                    "/zh/help/account/powerpack/email",
-                    "/zh/help/account/powerpack/send-to-kindle",
-                  ],
-                },
-              ],
-            },
-            {
-              title: "图床",
-              sidebarDepth: 2,
-              collapsable: false,
-              children: ["/zh/help/image-hosting/github-repository"],
-            },
-            "/zh/help/changelog",
-            "/zh/help/privacy-policy",
-          ],
+          "/zh/contribute": contributeSidebarFactory("zh").contribute,
+          "/zh/help": contributeSidebarFactory("zh").help,
         },
         navbar: true,
         sidebarDepth: 3,

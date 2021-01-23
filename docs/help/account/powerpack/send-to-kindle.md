@@ -1,1 +1,1 @@
-# 发送到 Kindle
+# Send To Kindle
