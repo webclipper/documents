@@ -3,4 +3,3 @@ node_modules
 docs/.vuepress/dist
 public
 yarn.lock
-.vercel
