@@ -70,6 +70,7 @@ function contributeSidebarFactory(locales) {
             "github-repository",
             "webdav",
             "flomo",
+            "leanote",
             {
               title: titles.help.powerpack,
               collapsable: false,
