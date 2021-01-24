@@ -1,7 +1,5 @@
 const contributeSidebarFactory = require("../../src/contributeSidebarFactory");
 
-console.log(contributeSidebarFactory("en").help);
-
 module.exports = {
   locales: {
     "/": {
