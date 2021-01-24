@@ -19,7 +19,7 @@ module.exports = {
     locales: {
       "/": {
         displayAllHeaders: true,
-        sidebarDepth: 2,
+        sidebarDepth: 3,
         sidebar: {
           "/contribute/": contributeSidebarFactory("en").contribute,
           "/help/": contributeSidebarFactory("en").help,
@@ -31,9 +31,8 @@ module.exports = {
         editLinkText: "Edit this page on GitHub",
         lastUpdated: "Last Updated",
         nav: [
-          { text: "Home", link: "/" },
-          { text: "Contribute", link: "/contribute/how-to-contribute" },
           { text: "Help", link: "/help/" },
+          { text: "Contribute", link: "/contribute/how-to-contribute" },
         ],
       },
       "/zh/": {
@@ -49,9 +48,8 @@ module.exports = {
         editLinkText: "在 GitHub 上编辑此页",
         lastUpdated: "上次更新",
         nav: [
-          { text: "首页", link: "/zh/" },
-          { text: "贡献", link: "/zh/contribute/how-to-contribute" },
           { text: "帮助中心", link: "/zh/help/" },
+          { text: "贡献", link: "/zh/contribute/how-to-contribute" },
         ],
       },
     },

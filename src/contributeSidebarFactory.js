@@ -85,7 +85,6 @@ function contributeSidebarFactory(locales) {
         collapsable: false,
         children: ["image-hosting/github-repository"],
       },
-      "changelog",
       "privacy-policy",
     ],
     `${prefix}help/`
