@@ -11,14 +11,18 @@ This clipper uses the leanote api 2.6.1 documented here https://github.com/leano
 
 ### New Account
 
-In webclipper settings > Account, click Bind Account to display the 'New Account form' and fill the required fields. Usually Type, Loeanote host, Email and Pwd needs to be filled :
+In webclipper settings > Account, click Bind Account to display the 'New Account form' and fill the required fields. Usually Type, Loeanote Origin, Email and Pwd needs to be filled :
 
-| Field Name   | Definition                                                                                    | Value              | Required |
-| ------------ | --------------------------------------------------------------------------------------------- | ------------------ | -------- |
-| Type         |                                                                                               | select 'Leanote'   | Yes      |
-| Leanote host | Address of the server, either the service https://leanote.com or you self hosted instance url | http(s):\/\/domain | Yes      |
-| Email        | Account email on this server                                                                  | email              | Yes      |
-| Password     | Account password on this server.                                                              | password           | Yes      |
+| Field Name     | Definition                                                                                    | Value              | Required |
+| -------------- | --------------------------------------------------------------------------------------------- | ------------------ | -------- |
+| Type           |                                                                                               | select 'Leanote'   | Yes      |
+| Leanote Origin | Address of the server, either the service https://leanote.com or you self hosted instance url | http(s):\/\/domain | Yes      |
+| Email          | Account email on this server                                                                  | email              | Yes      |
+| Password       | Account password on this server.                                                              | password           | Yes      |
+
+### Authentication
+
+click on 'Authentication' to give the plugin permission to the origin.
 
 ### Verify
 
