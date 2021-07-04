@@ -1,13 +1,21 @@
 # 发布
 
-### 环境变量
+### Release Script 环境变量
+
+```typescript
+type TARGET_BROWSER = "Chrome" | "Firefox" | undifined;
+
+type PUBLISH_TO_STORE = boolean;
+
+type DIST_TYPE = "Beta" | "Release" | "All";
+```
+
+### Webpack 环境变量
 
 ```typescript
 type TARGET_BROWSER = "Chrome" | "Firefox";
 
 type PUBLISH_TO_STORE = boolean;
-
-type DIST_TYPE = "Beta" | "Release" | "All";
 ```
 
 ### PUBLISH_TO_STORE
