@@ -1,26 +1,40 @@
 # 发布
 
+## 环境变量
+
+### 类型
+
+```typescript
+type TTargetBrowser = "Chrome" | "Firefox";
+```
+
 ### Release Script 环境变量
 
 ```typescript
-type TARGET_BROWSER = "Chrome" | "Firefox" | undifined;
+type TDistType = "Beta" | "Release";
 
-type PUBLISH_TO_STORE = boolean;
-
-type DIST_TYPE = "Beta" | "Release" | "All";
+interface IReleaseProcessEnv {
+  TARGET_BROWSER?: TTargetBrowser;
+  PUBLISH_TO_STORE?: "true";
+  DIST_TYPE?: TDistType;
+}
 ```
 
 ### Webpack 环境变量
 
 ```typescript
-type TARGET_BROWSER = "Chrome" | "Firefox";
-
-type PUBLISH_TO_STORE = boolean;
+interface IWebpackProcessEnv {
+  TARGET_BROWSER: TTargetBrowser;
+  PUBLISH_TO_STORE?: "true";
+  NODE_ENV: "development" | "production";
+}
 ```
 
-### PUBLISH_TO_STORE
+### 变量含义
 
-1. 当 PUBLISH_TO_STORE != "true" 且 TARGET_BROWSER = "Firefox manifest 添加
+#### PUBLISH_TO_STORE
+
+1. 当 PUBLISH_TO_STORE != "true" 且 TARGET_BROWSER = "Firefox" 时 manifest 添加
 
 ```json
 {
@@ -32,8 +46,8 @@ type PUBLISH_TO_STORE = boolean;
 }
 ```
 
-### DIST_TYPE
+#### DIST_TYPE
 
-1. 当 DIST_TYPE = "Beta" 时，跳过 Release 版本
-2. 当 DIST_TYPE = "Release" 时，跳过 Beta 版本
-3. 当 DIST_TYPE = "All" 时，全部构建
+1. 当 DIST_TYPE = "Beta" 时，如果版本号**不是** pre-release, 直接构建失败。
+2. 当 DIST_TYPE = "Release" 时，如果版本号**是** pre-release, 直接构建失败。
+3. 当 DIST_TYPE = "All" 时，没有任何校验。
